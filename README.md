@@ -1,52 +1,93 @@
-# sinfo - A Minimal System Information Tool
+# sinfo
 
-sinfo is a simple command-line application written in Rust that displays system information in a clean and minimalistic format, similar to Neofetch. It shows essential system details such as the OS name, kernel version, desktop environment or window manager, RAM usage, package count, and CPU information.
+A minimal system information display tool written in Rust. Shows essential system details in a clean, lowercase format.
+
+## Example Output
+```
+distro: debian gnu/linux
+krnl: 6.4.0-1-amd64
+de: gnome
+ram: 2.34 gb / 7.67 gb
+pkgs: 2137
+cpu: amd ryzen 5 3500u @ 2.10 ghz
+init: systemd
+```
 
 ## Features
 
-- Gathers and displays basic system information:
-  - OS Name
-  - Kernel Version
-  - Desktop Environment or Window Manager
-  - RAM Usage (used/total, in GB)
-  - Package Count (for supported package managers)
-  - CPU Model and Clock Speed
+- Displays system information in a clean, minimal format:
+  - Distribution name
+  - Kernel version
+  - Desktop environment
+  - RAM usage (used/total)
+  - Package count
+  - CPU model and clock speed
+  - Init system
+- No external dependencies
+- Fast execution
 
 ## Installation
 
-To build and install sinfo system-wide, run:
+### From Source
+1. Clone the repository:
+```bash
+git clone https://github.com/grauuummm/sinfo.git
+cd sinfo
+```
 
+2. Install system-wide (requires sudo):
 ```bash
 ./install.sh
 ```
 
-This will compile sinfo and install it to `/usr/local/bin` (you may be prompted for your password).
-
-Alternatively, you can build and run manually:
-
+Or build manually:
 ```bash
 cargo build --release
 ./target/release/sinfo
 ```
 
+### Requirements
+- Rust/Cargo
+- Linux-based OS
+
 ## Usage
 
-After building or installing, you can run the application with:
-
+If installed system-wide:
 ```bash
 sinfo
 ```
-or, if not installed system-wide:
+
+If built manually:
 ```bash
 ./target/release/sinfo
 ```
 
-## Supported Package Managers
+## Supported Systems
 
+### Package Managers
 - `dpkg` (Debian/Ubuntu)
 - `pacman` (Arch Linux)
-- `rpm` (Fedora/openSUSE)
+- `rpm` (Fedora/RHEL/openSUSE)
+
+### Init Systems
+- systemd
+- openrc
+- runit
+- others automatically detected
+
+## Future Plans
+- [ ] ASCII art logos for distributions
+- [ ] More package manager support
+- [ ] Configurable output format
+- [ ] Color output support
 
 ## Contributing
 
-Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
+Contributions are welcome! Feel free to:
+- Open an issue for bugs or feature requests
+- Submit a pull request
+- Suggest improvements
+
+## License
+
+This project is open source. Feel free to use, modify, and distribute as you wish.
