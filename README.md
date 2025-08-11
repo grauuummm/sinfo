@@ -15,14 +15,14 @@ init: systemd
 
 ## Features
 
-- Displays system information in a clean, minimal format:
+- Displays system information in a minimal format:
   - Distribution name
   - Kernel version
   - Desktop environment
   - RAM usage (used/total)
   - Package count
   - CPU model and clock speed
-  - Init system
+  - Init
 - No external dependencies
 - Fast execution
 
@@ -48,7 +48,7 @@ cargo build --release
 
 ### Requirements
 - Rust/Cargo
-- Linux-based OS
+- Linux distro
 
 ## Usage
 
@@ -63,17 +63,15 @@ If built manually:
 ```
 
 ## Supported Systems
+every distro that has its name written in /etc/os-release
 
 ### Package Managers
-- `dpkg` (Debian/Ubuntu)
-- `pacman` (Arch Linux)
-- `rpm` (Fedora/RHEL/openSUSE)
+- `dpkg` 
+- `pacman` 
+- `rpm` 
 
 ### Init Systems
-- systemd
-- openrc
-- runit
-- others automatically detected
+- automatically detected
 
 ## Future Plans
 - [ ] ASCII art logos for distributions
