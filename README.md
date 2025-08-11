@@ -2,7 +2,7 @@
 
 A minimal system information display tool written in Rust
 
-## Example Output (my specs also)
+## Example Output
 ```
 distro: debian gnu/linux
 krnl: 6.4.0-1-amd64
