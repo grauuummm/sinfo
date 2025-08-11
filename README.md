@@ -1,8 +1,8 @@
 # sinfo
 
-A minimal system information display tool written in Rust. Shows essential system details in a clean, lowercase format.
+A minimal system information display tool written in Rust
 
-## Example Output
+## Example Output (my specs also)
 ```
 distro: debian gnu/linux
 krnl: 6.4.0-1-amd64
